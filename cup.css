@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium',
+        'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(#3d3d3d, #313131);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    clip-path: circle(40% at right 70%);
+    z-index: -1;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    width: 80%;
+    margin: auto;
+}
+
+nav .logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0px 6px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #929286;
+    font-size: 20px;
+}
+
+.contain {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.contain .text {
+    width: 40%;
+    color: white;
+}
+
+.contain .text h2 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.contain .text p {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.contain .image {
+    width: 40%;
+}
+
+.contain .image img {
+    width: 400px;
+}
+
+@media (min-width:950px) and (max-width:1150px) {
+    .contain .image img {
+        width: 300px;
+    }
+
+}
+
+@media (max-width:950px) {
+
+    .contain,
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contain .image,
+    .contain .text {
+        width: 80%;
+    }
+
+    .contain .image img {
+        width: 200px;
+    }
+
+    body::after {
+        clip-path: circle(50% at bottom)
+    }
+
+}
